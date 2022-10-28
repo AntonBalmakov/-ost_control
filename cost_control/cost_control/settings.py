@@ -108,7 +108,9 @@ USE_I18N = True
 
 USE_TZ = True
 
-
+REST_FRAMEWORK = {
+    'NON_FIELD_ERRORS_KEY': 'error'
+}
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
