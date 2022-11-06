@@ -14,9 +14,12 @@ from rest_framework import views
 from drf_yasg.utils import swagger_auto_schema
 from drf_yasg import openapi
 from .serializer import LoginSerializer
+from .renderes import UserRender
+
 
 class RegisterView(generics.GenericAPIView):
     serializer_class = RegisterSerializer
+    renderer_classes = (UserRender,)
 
     def post(self, request):
         user = request.data
@@ -58,6 +61,7 @@ class VerifyEmail(views.APIView):
 
 class LoginAPIView(generics.GenericAPIView):
     serializer_class = LoginSerializer
+
     def post(self, request):
         serializer = self.serializer_class(data=request.data)
         serializer.is_valid(raise_exception=True)

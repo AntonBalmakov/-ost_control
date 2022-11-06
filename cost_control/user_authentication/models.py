@@ -4,6 +4,7 @@ from django.contrib.auth.models import BaseUserManager
 from django.contrib.auth.models import PermissionsMixin
 from rest_framework_simplejwt.tokens import RefreshToken
 
+
 class ManagerUser(BaseUserManager):
 
     def create_user(self, username, email, password=None):
