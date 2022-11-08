@@ -25,7 +25,7 @@ SECRET_KEY = "django-insecure-s!ci^w@z=m$vk!ecd^(qtif7z2h77y^s6m_b#=mi52wrr!)4!3
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -43,6 +43,8 @@ INSTALLED_APPS = [
     "drf_yasg",
     "cost_app",
     "income",
+    "corsheaders",
+    "userstats",
 ]
 
 MIDDLEWARE = [
@@ -50,6 +52,8 @@ MIDDLEWARE = [
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
+    "corsheaders.middleware.CorsMiddleware",
+    "django.middleware.common.CommonMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
@@ -136,6 +140,8 @@ EMAIL_PORT = 587
 
 EMAIL_HOST_USER = 'balmakov.anton@gmail.com'
 EMAIL_HOST_PASSWORD = 'hddewdbzydyvkgwj'
+
+CORS_ALLOW_ALL_ORIGINS = True
 
 SWAGGER_SETTINGS = {
     'SECURITY_DEFINITIONS': {

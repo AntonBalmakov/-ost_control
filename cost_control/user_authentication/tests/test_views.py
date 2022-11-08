@@ -1,6 +1,7 @@
 from .test_setup import TestSetUp
 from ..models import User
 
+
 class TestViews(TestSetUp):
 
     def test_user_cannot_register_with_no_data(self):
