@@ -1,4 +1,3 @@
-from django.shortcuts import render
 from rest_framework.views import APIView
 import datetime
 from cost_app.models import Expense
