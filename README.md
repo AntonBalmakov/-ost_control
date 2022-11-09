@@ -12,5 +12,8 @@ Cost control for your life
 - docker-compose build
 -  docker-compose up
 - --
+- Documentation for the API is made in Swagger
+- 
+python manage.py crontab remove
 
 

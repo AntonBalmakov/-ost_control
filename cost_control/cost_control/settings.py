@@ -44,7 +44,9 @@ INSTALLED_APPS = [
     "cost_app",
     "income",
     "corsheaders",
+    "django_crontab",
     "userstats",
+
 ]
 
 MIDDLEWARE = [
@@ -58,13 +60,15 @@ MIDDLEWARE = [
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
-
+CRONJOBS = [
+    ('10 11  * *', 'userstats.cron.my_scheduled_job')
+]
 ROOT_URLCONF = "cost_control.urls"
 
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [],
+        "DIRS": [os.path.join(BASE_DIR, 'templates/'), ],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -152,7 +156,5 @@ SWAGGER_SETTINGS = {
         }
     }
 }
-
-
 # EMAIL_USER = os.environ.get('EMAIL_USER')
 # EMAIL_PASSWORD = os.environ.get('EMAIL_PASSWORD')
