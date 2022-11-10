@@ -19,6 +19,6 @@ Start cron/remove
 - --
 - Documentation for the API is made in Swagger
 - --
-
+-Deploy for Heroku https://costcontrolapp.herokuapp.com/
 
 
