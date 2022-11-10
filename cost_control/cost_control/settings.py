@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 import os
 from pathlib import Path
 from datetime import timedelta
+import django_heroku
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -20,6 +22,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
+# SECRET_KEY = os.environ.get('SECRET_KEY')
 SECRET_KEY = "django-insecure-s!ci^w@z=m$vk!ecd^(qtif7z2h77y^s6m_b#=mi52wrr!)4!3"
 
 # SECURITY WARNING: don't run with debug turned on in production!
@@ -139,11 +142,12 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
-# EMAIL_HOST_USER = 'kubik19891502@gmail.com'
-# EMAIL_HOST_PASSWORD = 'svpyuibodsyjuzsk'
 
 EMAIL_HOST_USER = 'balmakov.anton@gmail.com'
 EMAIL_HOST_PASSWORD = 'hddewdbzydyvkgwj'
+# EMAIL_USER = os.environ.get('EMAIL_USER')
+# EMAIL_PASSWORD = os.environ.get('EMAIL_PASSWORD')
+django_heroku.settings(locals())
 
 CORS_ALLOW_ALL_ORIGINS = True
 
@@ -156,5 +160,3 @@ SWAGGER_SETTINGS = {
         }
     }
 }
-# EMAIL_USER = os.environ.get('EMAIL_USER')
-# EMAIL_PASSWORD = os.environ.get('EMAIL_PASSWORD')
