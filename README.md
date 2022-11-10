@@ -19,6 +19,9 @@ Start cron/remove
 - --
 - Documentation for the API is made in Swagger
 - --
--Deploy for Heroku https://costcontrolapp.herokuapp.com/
-
+- Deploy for Heroku https://costcontrolapp.herokuapp.com/
+- User registration via gmail is required.
+- After that you will receive a link to go through.
+- After which you must log in.
+- And Autorize. 
 
