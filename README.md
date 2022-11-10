@@ -11,7 +11,7 @@ Run:
 - --
 Or Docker:
 - docker-compose build
--  docker-compose up
+- docker-compose up
 - --
 Start cron/remove
 - python manage.py crontab add
