@@ -25,3 +25,4 @@ Start cron/remove
 - After which you must log in.
 - And Autorize. 
 
+![image](https://user-images.githubusercontent.com/61959404/203065792-d6eb482d-eedc-4f3a-9759-edbfe36ad235.png)
