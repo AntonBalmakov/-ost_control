@@ -27,5 +27,6 @@ Start cron/remove
 
 
 - --
-- Use a known working email
+- Use a known working email/ Use gmail.com
+- --
 ![image](https://user-images.githubusercontent.com/61959404/203065792-d6eb482d-eedc-4f3a-9759-edbfe36ad235.png)
